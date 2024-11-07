@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  node-api:
+    container_name: node-api
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    entrypoint: npm run start
+    volumes:
+      - ./app/api:/app/api
+      - ./app/index.js:/app/index.js
+      - ./app/package.json:/app/package.json
+      - ./app/ecosystem.config.cjs:/app/ecosystem.config.cjs
+    ports:
+      - 8000:8000
+    environment:
+      - ENV=development
+    networks:
+        - network-api
+
+networks:
+    network-api:
+        driver: bridge
