@@ -2,13 +2,40 @@
 
 Esta API fornece informações sobre os filmes indicados e vencedores do Golden Raspberry Awards.
 
-## Tecnologias Utilizadas
+## Tecnologias utilizadas
 
-- ![Node.js](https://img.icons8.com/color/48/000000/nodejs.png) **Node.js**
-- ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png) **JavaScript**
-- ![Docker](https://img.icons8.com/color/48/000000/docker.png) **Docker**
-- ![SQLite](https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg) **SQLite**
-- ![Vitest](https://vitest.dev/logo.svg) **Vitest**
+<table>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">
+      <img src="https://img.icons8.com/color/35/000000/nodejs.png" alt="Node.js" style="width: 35px;" />
+    </td>
+    <td style="vertical-align: middle;">Node.js</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">
+      <img src="https://img.icons8.com/color/35/000000/javascript.png" alt="JavaScript" style="width: 35px;" />
+    </td>
+    <td style="vertical-align: middle;">JavaScript</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">
+      <img src="https://img.icons8.com/color/35/000000/docker.png" alt="Docker" style="width: 35px;" />
+    </td>
+    <td style="vertical-align: middle;">Docker</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg" alt="SQLite" style="width: 35px;" />
+    </td>
+    <td style="vertical-align: middle;">SQLite</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">
+      <img src="https://vitest.dev/logo.svg" alt="Vitest" style="width: 35px;" />
+    </td>
+    <td style="vertical-align: middle; font-weight;">Vitest</td>
+  </tr>
+</table>
 
 ## Instalação
 
@@ -229,4 +256,25 @@ docker-compose -f docker-compose-test.yaml up -d
     ```
 
     <small>Se dois produtores possuírem o mesmo intervalo seja min ou max ambos serão adicionados na lista.</small>
+
+
+## Futuras Implementações
+
+Para melhorias futuras do projeto, podem ser implementados e configuradas as seguintes opções:
+
+### 1. Integração com Sequelize
+- O **Sequelize** pode ser integrado ao projeto para facilitar a manipulação de banco de dados SQL de forma mais eficiente e flexível, utilizando um ORM robusto e poderoso.
+
+### 2. Interface de Usuário (UI) com Vitest
+- A **interface gráfica do Vitest** pode configurada e habilitada, permitindo a visualização em tempo real dos testes em execução, facilitando o acompanhamento do status e dos resultados dos testes durante o desenvolvimento.
+
+### 3. Cobertura de Testes e Integração com SonarQube
+- Será adicionada a configuração de **cobertura de testes**, proporcionando uma visão clara de quais partes do código estão sendo testadas e ajudando a garantir que a base de código esteja bem testada.
+- Integração com **SonarQube** para monitorar a qualidade do código, identificando possíveis **bugs**, **codesmells**, e **erros**, promovendo um ambiente de desenvolvimento mais saudável e sustentável.
+
+### 4. Criação de Novas Rotas
+- **Rotas para Consultar Studios e Producers**: Novas rotas devem adicionadas para permitir a consulta de dados sobre *studios* e *producers*.
+- **Autenticação e Permissão de Rotas**: Implementação de uma camada de **autenticação** para controlar o acesso às rotas, com sistemas de **permissão** para garantir a segurança e a integridade do sistema.
+
+Essas melhorias irão contribuir para a expansão e a robustez do projeto, além de proporcionar uma experiência mais rica e segura para os usuários.
 
