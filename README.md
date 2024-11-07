@@ -4,37 +4,11 @@ Esta API fornece informações sobre os filmes indicados e vencedores do Golden 
 
 ## Tecnologias Utilizadas
 
-
-<div style="display: flex; align-items: center; margin-bottom: 5px;">
-  <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" style="margin-right: 10px; width: 35px;" />
-  <strong>Node.js</strong>
-</div>
-
-<div style="display: flex; align-items: center; margin-bottom: 5px;">
-  <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" style="margin-right: 10px; width: 35px;" />
-  <strong>JavaScript</strong>
-</div>
-
-<div style="display: flex; align-items: center; margin-bottom: 5px;">
-  <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker" style="margin-right: 10px; width: 35px;" />
-  <strong>Docker</strong>
-</div>
-
-<div style="display: flex; align-items: center; margin-bottom: 5px;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg" alt="SQLite" style="margin-right: 10px; width: 35px;" />
-  <strong>SQLite</strong>
-</div>
-
-<div style="display: flex; align-items: center; margin-bottom: 5px;">
-  <img src="https://vitest.dev/logo.svg" alt="Vitest" style="margin-right: 10px; width: 35px;" />
-  <strong>Vitest</strong>
-</div>
-
-<!-- <div style="display: flex; align-items: center; margin-bottom: 5px;">
-  <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" style="margin-right: 10px; width: 35px;" />
-  <strong>React</strong>
-</div> -->
-
+- ![Node.js](https://img.icons8.com/color/48/000000/nodejs.png) **Node.js**
+- ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png) **JavaScript**
+- ![Docker](https://img.icons8.com/color/48/000000/docker.png) **Docker**
+- ![SQLite](https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg) **SQLite**
+- ![Vitest](https://vitest.dev/logo.svg) **Vitest**
 
 ## Instalação
 
