@@ -25,7 +25,7 @@ Download zip do projeto e descompactar
 ## Iniciar a aplicação
 
 ```bash
-cd projeto...
+cd golden-raspberry-api/app
 
 npm install
 
@@ -41,7 +41,7 @@ npm run test
 ## Iniciar a aplicação usando docker
 
 ```bash
-cd projeto...
+cd golden-raspberry-api
 
 docker-compose up -d
 ```
