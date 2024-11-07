@@ -38,10 +38,10 @@ Esta API fornece informações sobre os filmes indicados e vencedores do Golden 
 
 ## Instalação
 
-Use o repositório do github para clonar/baixar/instalar o projeto [Golden Raspberry - Github](https://github.com/jiovanmichel).
+Use o repositório do github para clonar/baixar/instalar o projeto [Golden Raspberry - Github](https://github.com/jiovanmichel/golden-raspberry-api).
 
 ```bash
-git clone https://github.com/jiovanmichel
+git clone https://github.com/jiovanmichel/golden-raspberry-api
 
 ou
 
