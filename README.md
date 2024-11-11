@@ -37,6 +37,14 @@ Esta API fornece informações sobre os filmes indicados e vencedores do Golden 
   </tr>
 </table>
 
+## Dependencias
+
+Nodejs na versão 22.11.0
+
+ou
+
+Docker e Docker Compose
+
 ## Instalação
 
 Use o repositório do github para clonar/baixar/instalar o projeto [Golden Raspberry - Github](https://github.com/jiovanmichel/golden-raspberry-api).
@@ -53,6 +61,8 @@ Download zip do projeto e descompactar
 
 ```bash
 cd golden-raspberry-api/app
+
+npm install pm2 -g
 
 npm install
 
@@ -82,7 +92,7 @@ docker-compose -f docker-compose-test.yaml up -d
 ## Rotas da API
 
 
-1. GET /api/movies
+1. GET http://localhost:8000/api/movies
 
     Lista todos os filmes
 
@@ -100,7 +110,7 @@ docker-compose -f docker-compose-test.yaml up -d
     ]
     ```
 
-2. GET /api/movies/:id
+2. GET http://localhost:8000/api/movies/1
 
     Obtém informações de um filme específico pelo seu ID.
 
@@ -120,7 +130,7 @@ docker-compose -f docker-compose-test.yaml up -d
     },
     ```
 
-3. POST /api/movies
+3. POST http://localhost:8000/api/movies
 
     Cria um novo filme
 
@@ -147,7 +157,7 @@ docker-compose -f docker-compose-test.yaml up -d
     },
 
 
-4. PUT /api/movies/:id
+4. PUT http://localhost:8000/api/movies/1
 
     Atualiza completamente as informações de um filme
 
@@ -177,7 +187,7 @@ docker-compose -f docker-compose-test.yaml up -d
         "winner": "1"
     },
 
-5. PATCH /api/movies/:id
+5. PATCH http://localhost:8000/api/movies/1
 
     Atualiza parcialmente as informações de um filme
 
@@ -204,7 +214,7 @@ docker-compose -f docker-compose-test.yaml up -d
     },
     ```
 
-6. DELETE /api/movies/:id
+6. DELETE http://localhost:8000/api/movies/1
 
     Deleta um filme pelo ID
 
@@ -217,7 +227,7 @@ docker-compose -f docker-compose-test.yaml up -d
     true
     ```
 
-7. GET /api/producers/awards-min-max-interval
+7. GET http://localhost:8000/api/producers/awards-min-max-interval
 
     Lista os produtores com menor __(min)__ e maior __(max)__ intervalo entre dois prêmios
 
