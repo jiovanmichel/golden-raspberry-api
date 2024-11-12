@@ -4,9 +4,14 @@ import { getMinMaxDetailsIntervalInYears, groupWinYearsByProducers } from './hel
 const ProducerService = {
     async getMinMaxAwardsInterval() {
         try {
-            const query = 'SELECT producers, year FROM movies WHERE winner = 1 ORDER BY producers, year;';
-
-            const movies = await MovieModel.getCustomQuery(query);
+            const movies = await MovieModel.findAll({
+                attributes: ['producers', 'year'],
+                where: { winner: 'yes' },
+                order: [
+                    ['producers', 'ASC'],
+                    ['year', 'ASC'],
+                ],
+            });
 
             const producersYears = groupWinYearsByProducers(movies);
 

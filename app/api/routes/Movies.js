@@ -4,9 +4,9 @@ import MoviesControllers from '../controllers/Movies.js';
 
 const router = Router();
 
-router.get('/', MoviesControllers.getAll);
+router.get('/', MoviesControllers.findAll);
 
-router.get('/:id', MoviesControllers.getById);
+router.get('/:id', MoviesControllers.findById);
 
 router.post('/', MoviesControllers.create);
 

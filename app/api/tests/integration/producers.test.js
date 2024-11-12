@@ -2,7 +2,7 @@ import request from 'supertest';
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import startEnvironment, { app } from '../setup/Environment.js';
 
-import sqliteDB from '../../setup/database/sqlite.js';
+import sequelizeConfig from '../../setup/database/sequelizeConfig.js';
 
 describe('Producers API - Testes de Integração', () => {
     beforeAll(async () => {
@@ -10,7 +10,7 @@ describe('Producers API - Testes de Integração', () => {
     });
 
     afterAll(async () => {
-        sqliteDB.close();
+        await sequelizeConfig.close();
     });
 
     it('Deve retornar os produtores com maior e menor intervalo de prêmios', async () => {

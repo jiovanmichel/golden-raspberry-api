@@ -1,6 +1,6 @@
 import sqlite3 from 'sqlite3';
 
-const sqliteDB = new sqlite3.Database(':memory:', (err) => {
+const sqliteConfig = new sqlite3.Database(':memory:', (err) => {
     if(err) {
         console.error('Error opening database ' + err.message);
     }
@@ -9,4 +9,4 @@ const sqliteDB = new sqlite3.Database(':memory:', (err) => {
     }
 });
 
-export default sqliteDB;
+export default sqliteConfig;

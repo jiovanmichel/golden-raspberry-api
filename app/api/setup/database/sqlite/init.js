@@ -1,4 +1,4 @@
-import sqliteDB from './sqlite.js';
+import sqliteDB from './sqliteConfig.js';
 
 const initDatabase = () => {
     return new Promise((resolve, reject) => {
