@@ -8,12 +8,14 @@ export function getMinMaxDetailsIntervalInYears(years) {
         max: {}
     }
 
+    if (!Array.isArray(years)) {
+        return details;
+    }
+
     for (let i = 1; i < years.length; i++) {
         const interval = years[i] - years[i - 1];
         const followingWin = years[i];
         const previousWin = years[i - 1];
-
-        
 
         const infos = {
             interval,
@@ -33,4 +35,32 @@ export function getMinMaxDetailsIntervalInYears(years) {
     }
 
     return details;
+}
+
+export function groupWinYearsByProducers(movies = []) {
+    const producerIntervals = {};
+
+    const addYearInProducer = (producer, year) => {
+        if (!producerIntervals[producer]) {
+            producerIntervals[producer] = [];
+        }
+        producerIntervals[producer].push(year);
+        producerIntervals[producer].sort((a, b) => a - b);
+    }
+
+    for (const movie of movies) {
+        const { year } = movie;
+
+        try {
+            const producersList = movie.producers.replaceAll(' and ', ', ').split(',');
+            for (const producer of producersList) {
+                addYearInProducer(producer.trim(), year);
+            }
+        } catch (error) {
+            console.log('Erro ao separar produtores.');
+            addYearInProducer(movie.producers, year);
+        }
+    }
+
+    return producerIntervals;
 }

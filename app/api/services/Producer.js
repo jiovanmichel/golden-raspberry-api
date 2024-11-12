@@ -1,5 +1,5 @@
 import MovieModel from '../models/Movie.js';
-import { getMinMaxDetailsIntervalInYears } from './helpers/Producer.js';
+import { getMinMaxDetailsIntervalInYears, groupWinYearsByProducers } from './helpers/Producer.js';
 
 const ProducerService = {
     async getMinMaxAwardsInterval() {
@@ -8,14 +8,7 @@ const ProducerService = {
 
             const movies = await MovieModel.getCustomQuery(query);
 
-            const producerIntervals = {};
-
-            for (const movie of movies) {
-                if (!producerIntervals[movie.producers]) {
-                    producerIntervals[movie.producers] = [];
-                }
-                producerIntervals[movie.producers].push(movie.year);
-            }
+            const producersYears = groupWinYearsByProducers(movies);
 
             const results = {
                 min: [],
@@ -25,8 +18,8 @@ const ProducerService = {
             let minInterval = Infinity;
             let maxInterval = -Infinity;
 
-            for (const producer in producerIntervals) {
-                const details = getMinMaxDetailsIntervalInYears(producerIntervals[producer]);
+            for (const producer in producersYears) {
+                const details = getMinMaxDetailsIntervalInYears(producersYears[producer]);
 
                 const minIntervalProducer = details.min?.interval;
                 const maxIntervalProducer = details.max?.interval;
