@@ -105,7 +105,7 @@ docker-compose -f docker-compose-test.yaml up -d
             "producers": "Producers Name",
             "studios": "Studios Name",
             "year": 2021,
-            "winner": "1"
+            "winner": "yes"
         },
     ]
     ```
@@ -126,7 +126,7 @@ docker-compose -f docker-compose-test.yaml up -d
         "producers": "Producers Name",
         "studios": "Studios Name",
         "year": 2021,
-        "winner": "1"
+        "winner": "yes"
     },
     ```
 
@@ -141,7 +141,7 @@ docker-compose -f docker-compose-test.yaml up -d
         "producers": "Producers Name",
         "studios": "Studios Name",
         "year": 2021,
-        "winner": "1"
+        "winner": "yes"
     },
     ```
 
@@ -153,7 +153,7 @@ docker-compose -f docker-compose-test.yaml up -d
         "producers": "Producers Name",
         "studios": "Studios Name",
         "year": 2021,
-        "winner": "1"
+        "winner": "yes"
     },
 
 
@@ -172,7 +172,7 @@ docker-compose -f docker-compose-test.yaml up -d
         "producers": "Updated Producers Name",
         "studios": "Updated Studios Name",
         "year": 2021,
-        "winner": "1"
+        "winner": "yes"
     },
     ```
 
@@ -184,7 +184,7 @@ docker-compose -f docker-compose-test.yaml up -d
         "producers": "Updated Producers Name",
         "studios": "Updated Studios Name",
         "year": 2021,
-        "winner": "1"
+        "winner": "yes"
     },
 
 5. PATCH http://localhost:8000/api/movies/1
@@ -210,7 +210,7 @@ docker-compose -f docker-compose-test.yaml up -d
         "producers": "Producers Name",
         "studios": "Studios Name",
         "year": 2021,
-        "winner": "1"
+        "winner": "yes"
     },
     ```
 
@@ -272,17 +272,14 @@ docker-compose -f docker-compose-test.yaml up -d
 
 Para melhorias futuras do projeto, podem ser implementados e configuradas as seguintes opções:
 
-### 1. Integração com Sequelize
-- O **Sequelize** pode ser integrado ao projeto para facilitar a manipulação de banco de dados SQL de forma mais eficiente e flexível, utilizando um ORM robusto e poderoso.
-
-### 2. Interface de Usuário (UI) com Vitest
+### 1. Interface de Usuário (UI) com Vitest
 - A **interface gráfica do Vitest** pode configurada e habilitada, permitindo a visualização em tempo real dos testes em execução, facilitando o acompanhamento do status e dos resultados dos testes durante o desenvolvimento.
 
-### 3. Cobertura de Testes e Integração com SonarQube
+### 2. Cobertura de Testes e Integração com SonarQube
 - Será adicionada a configuração de **cobertura de testes**, proporcionando uma visão clara de quais partes do código estão sendo testadas e ajudando a garantir que a base de código esteja bem testada.
 - Integração com **SonarQube** para monitorar a qualidade do código, identificando possíveis **bugs**, **codesmells**, e **erros**, promovendo um ambiente de desenvolvimento mais saudável e sustentável.
 
-### 4. Criação de Novas Rotas
+### 3. Criação de Novas Rotas
 - **Rotas para Consultar Studios e Producers**: Novas rotas devem adicionadas para permitir a consulta de dados sobre *studios* e *producers*.
 - **Autenticação e Permissão de Rotas**: Implementação de uma camada de **autenticação** para controlar o acesso às rotas, com sistemas de **permissão** para garantir a segurança e a integridade do sistema.
 
