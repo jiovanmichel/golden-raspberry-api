@@ -37,7 +37,7 @@ Esta API fornece informações sobre os filmes indicados e vencedores do Golden 
   </tr>
 </table>
 
-## Dependencias
+## Dependências
 
 Nodejs na versão 22.11.0
 
